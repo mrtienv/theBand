@@ -80,21 +80,21 @@
                             <h3>New York</h3>
                             <p class="opacity">Fri 27 Nov 2016</p>
                             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <a href="#" class="btn-ticket">Buy Tickets</a>
+                            <button class="btn-ticket js-buy-ticket">Buy Tickets</button>
                         </div>
                         <div class="tour-place">
                             <img src="/assets/img/paris.jpg" alt="">
                             <h3>Paris</h3>
                             <p class="opacity">Sat 28 Nov 2016</p>
                             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <a href="#" class="btn-ticket">Buy Tickets</a>
+                            <button class="btn-ticket js-buy-ticket">Buy Tickets</button>
                         </div>
                         <div class="tour-place">
                             <img src="/assets/img/sanfran.jpg" alt="">
                             <h3>San Francisco</h3>
                             <p class="opacity">Sun 29 Nov 2016</p>
                             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <a href="#" class="btn-ticket">Buy Tickets</a>
+                            <button class="btn-ticket js-buy-ticket">Buy Tickets</button>
                         </div>
                         <div class="clear"></div>
 
@@ -106,9 +106,7 @@
             <div id="contact" class="content-section">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-subheading">Fan? Drop a note!</p>
-                <p class="about">
-                    We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
+                
             </div>
 
         </div>
@@ -117,32 +115,36 @@
 
         </div>
     </div>
-    <div class="modal">
-        <div class="modal-container">
-            <div class="modal=close">
-                <i class="ti-close"></i>
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close icon-close"></i>
             </div>
             <header class="modal-header">
-                <i class="ti-bag"></i>
+                <i class="ti-bag icon-ticket"></i>
                 Tickets
             </header>
             <div class="modal-body">
-                <label for="" class="modal-label">
+                <label for="ticket" class="modal-label">
                     <i class="ti-shopping-cart"></i>
                     Tickets, $15 per person
                 </label>
-                <input type="text" class="modal-input" placeholder="How many?">
-                <label for="" class="modal-label">
+                <input id="ticket" type="text" class="modal-input" placeholder="How many?">
+                <label for="email" class="modal-label">
                     <i class="ti-user"></i>
                     Send To
                 </label>
-                <input type="email" class="modal-input" placeholder="Enter Email">
+                <input id="email" type="email" class="modal-input" placeholder="Enter Email">
                 <button id="buy-ticket">
                     PAY
                     <i class="ti-check"></i>
                 </button>
             </div>
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href="#">help?</a> </p>
+            </footer>
         </div>
     </div>
+    <script src="./the-band.js"></script>
 </body>
 </html>

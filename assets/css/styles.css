@@ -256,7 +256,6 @@ body {
 }
 
 .modal {
-    display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -265,10 +264,91 @@ body {
     bottom: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.modal.open {
+    display: flex;
 }
 
 .modal-container {
     background-color: #ffffff;
     width: 900px;
+    max-width: calc(100%-32px);
     min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease .5s;
+}
+
+.modal-header {
+    background-color: #009688;
+    font-size: 30px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #ffffff;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+
+.icon-ticket {
+    margin-right: 12px;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-label {
+    display: block;
+    color: #000000;
+    margin: 15px 0;
+}
+
+.modal-input {
+    padding: 10px;
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+#buy-ticket {
+    background-color: #009688;
+    display: block;
+    width: 100%;
+    margin: 16px 0;
+    padding: 16px;
+    color: #ffffff;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 24px 0;
+    padding: 0 24px;
+}
+
+/* dùng tạo hình ảnh hoạt họa */
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
